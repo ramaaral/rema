@@ -26,7 +26,7 @@
 html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); }
 body { -webkit-font-smoothing: antialiased; }
 button, input, select, textarea { font: inherit; color: inherit; }
-button { cursor: pointer; }
+button { cursor: pointer; touch-action: manipulation; }
 img { display: block; max-width: 100%; }
 
 #app {
@@ -204,6 +204,7 @@ h1 {
   background: rgba(7,8,7,.92);
   border-top: 1px solid var(--line);
   backdrop-filter: blur(16px);
+  z-index: 30;
 }
 .tabbar button {
   background: transparent;
@@ -225,7 +226,10 @@ h1 {
   background: rgba(0,0,0,.55);
   display: grid;
   align-items: end;
-  z-index: 20;
+  z-index: 40;
+}
+.sheet-bg[hidden] {
+  display: none !important;
 }
 .sheet {
   background: var(--bg-2);
