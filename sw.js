@@ -1,4 +1,4 @@
-const CACHE = "rema-v1";
+const CACHE = "rema-v2";
 const ASSETS = [
   "./",
   "./index.html",
