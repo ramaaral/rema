@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#070807" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="REMA" />
+  <title>REMA</title>
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="apple-touch-icon" href="./icon.svg" />
+  <link rel="icon" href="./icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app">
+    <aside class="rail" aria-label="Navegación">
+      <div class="brand">
+        <img src="./icon.svg" alt="" />
+        <div>
+          <strong>REMA</strong>
+          <span id="rail-date">—</span>
+        </div>
+      </div>
+      <nav class="rail-nav" id="rail-nav"></nav>
+      <div class="rail-foot">
+        <div class="pts-pill" id="rail-points">0 pts</div>
+        <button class="ghost" data-go="ajustes">Ajustes</button>
+      </div>
+    </aside>
+
+    <main class="stage">
+      <header class="top">
+        <div>
+          <p class="kicker" id="top-kicker">Hoy</p>
+          <h1 id="top-title">REMA</h1>
+        </div>
+        <button class="icon-btn" id="btn-more" aria-label="Más">···</button>
+      </header>
+      <section id="view" class="view"></section>
+    </main>
+
+    <nav class="tabbar" id="tabbar" aria-label="Secciones"></nav>
+  </div>
+
+  <div class="sheet-bg" id="sheet-bg" hidden>
+    <div class="sheet" id="sheet"></div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
